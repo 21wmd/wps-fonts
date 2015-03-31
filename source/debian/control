@@ -1,0 +1,13 @@
+Source: wpsfonts
+Section: fonts
+Priority: optional
+Maintainer: Azlar Wang <wangmd21@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+Homepage: http://www.linuxdeepin.com/
+
+Package: wpsfonts
+Architecture: all
+Depends: ${misc:Depends}
+Description: Missing fonts for wps.
+ .

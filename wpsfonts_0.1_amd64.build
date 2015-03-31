@@ -1,0 +1,70 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc
+dpkg-buildpackage: 源码包 wpsfonts
+dpkg-buildpackage: 源码版本 0.1
+dpkg-buildpackage: source distribution unstable
+dpkg-buildpackage: 源码修改者 Azlar Wang <wangmd21@gmail.com>
+ dpkg-source --before-build wpsfonts-0.1
+dpkg-buildpackage: 主机架构 amd64
+ fakeroot debian/rules clean
+dh clean 
+   dh_testdir
+   dh_auto_clean
+   dh_clean
+ dpkg-source -b wpsfonts-0.1
+dpkg-source: 警告: version does not contain a revision
+dpkg-source: info: using source format `3.0 (quilt)'
+dpkg-source: info: building wpsfonts using existing ./wpsfonts_0.1.orig.tar.gz
+dpkg-source: info: building wpsfonts in wpsfonts_0.1.debian.tar.gz
+dpkg-source: info: building wpsfonts in wpsfonts_0.1.dsc
+ debian/rules build
+dh build 
+   dh_testdir
+   dh_auto_configure
+   dh_auto_build
+   dh_auto_test
+ fakeroot debian/rules binary
+dh binary 
+   dh_testroot
+   dh_prep
+   dh_auto_install
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_perl
+   dh_link
+   dh_compress
+   dh_fixperms
+   dh_installdeb
+   dh_gencontrol
+dpkg-gencontrol: 警告: File::FcntlLock not available; using flock which is not NFS-safe
+   dh_md5sums
+   dh_builddeb
+dpkg-deb：正在新建软件包 wpsfonts，包文件为 ../wpsfonts_0.1_all.deb。
+ dpkg-genchanges  >../wpsfonts_0.1_amd64.changes
+dpkg-genchanges: 上传数据中包含完整的原始代码
+ dpkg-source --after-build wpsfonts-0.1
+dpkg-buildpackage: 完整上载（包含原始的代码）
+Now running lintian...
+E: wpsfonts changes: bad-distribution-in-changes-file unstable
+W: wpsfonts source: non-native-package-with-native-version
+W: wpsfonts source: maintainer-script-lacks-debhelper-token debian/postinst
+W: wpsfonts source: package-needs-versioned-debhelper-build-depends 9
+W: wpsfonts source: out-of-date-standards-version 3.9.4 (current is 3.9.5)
+E: wpsfonts: helper-templates-in-copyright
+W: wpsfonts: copyright-has-url-from-dh_make-boilerplate
+E: wpsfonts: copyright-contains-dh_make-todo-boilerplate
+W: wpsfonts: readme-debian-contains-debmake-template
+E: wpsfonts: extended-description-is-empty
+W: wpsfonts: executable-not-elf-or-script usr/share/fonts/mtextra.ttf
+W: wpsfonts: executable-not-elf-or-script usr/share/fonts/wingding.ttf
+W: wpsfonts: executable-not-elf-or-script usr/share/fonts/wingdng2.ttf
+W: wpsfonts: executable-not-elf-or-script usr/share/fonts/webdings.ttf
+W: wpsfonts: executable-not-elf-or-script usr/share/fonts/symbol.ttf
+W: wpsfonts: executable-not-elf-or-script usr/share/fonts/wingdng3.ttf
+W: wpsfonts: maintainer-script-should-not-use-fc-cache postinst:7
+Finished running lintian.
+Now signing changes and any dsc files...
+ signfile wpsfonts_0.1.dsc Azlar Wang <wangmd21@gmail.com>
+gpg: “Azlar Wang <wangmd21@gmail.com>”已跳过：私钥不可用
+gpg: /tmp/debsign.tZcBmSug/wpsfonts_0.1.dsc: clearsign failed: 私钥不可用
+debsign: gpg error occurred!  Aborting....

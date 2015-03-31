@@ -1,0 +1,9 @@
+Package: wpsfonts
+Version: 0.1
+Architecture: all
+Maintainer: Azlar Wang <wangmd21@gmail.com>
+Installed-Size: 425
+Section: fonts
+Priority: optional
+Homepage: http://www.linuxdeepin.com/
+Description: Missing fonts for wps.

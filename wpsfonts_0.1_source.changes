@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Wed, 25 Mar 2015 15:57:46 +0800
+Source: wpsfonts
+Binary: wpsfonts
+Architecture: source
+Version: 0.1
+Distribution: unstable
+Urgency: low
+Maintainer: Azlar Wang <wangmd21@gmail.com>
+Changed-By: Azlar Wang <wangmd21@gmail.com>
+Description: 
+ wpsfonts   - Missing fonts for wps.
+Changes: 
+ wpsfonts (0.1) unstable; urgency=low
+ .
+   * packaged for deepin
+Checksums-Sha1: 
+ d52876a1db03cd13adec25ab7db60e1090329a06 798 wpsfonts_0.1.dsc
+ 00a8e4618f23a5634fb35dad7742a001ff8ec2df 23620772 wpsfonts_0.1.orig.tar.gz
+ 28e45394d1d0ea5f6523f4252e91510f8ba82882 1795 wpsfonts_0.1.debian.tar.gz
+Checksums-Sha256: 
+ 8a16c9f1c80a690e9d3f6dea0ea15d701bc55e9519f2f81b3036c6b533614d3c 798 wpsfonts_0.1.dsc
+ 219caadd32525b7bb234560ce53a27a32edfa332558dfd1422a1886637402c8f 23620772 wpsfonts_0.1.orig.tar.gz
+ 0c462220c1333234737c8a2d24c1461a80364f2f5b84340fa93c667a2f91165e 1795 wpsfonts_0.1.debian.tar.gz
+Files: 
+ 9c09c03361a514ecdf4361f323901d8b 798 fonts optional wpsfonts_0.1.dsc
+ f0af4b3c98dd46c45792cdd733af0ba3 23620772 fonts optional wpsfonts_0.1.orig.tar.gz
+ ec86645520e29d778cc228378046a1b9 1795 fonts optional wpsfonts_0.1.debian.tar.gz
